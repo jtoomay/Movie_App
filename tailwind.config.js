@@ -2,10 +2,9 @@
 module.exports = {
   content: ["./app/**/*.{js,jsx,ts,tsx}"],
   presets: [require("nativewind/preset")],
-  // todo: Might need to change the content path
   theme: {
     extend: {
-       colors: {
+      colors: {
         primary: "#030014",
         secondary: "#151312",
         light: {
@@ -22,5 +21,4 @@ module.exports = {
     },
   },
   plugins: [],
-}
-
+};
