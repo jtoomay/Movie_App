@@ -18,15 +18,12 @@ export const fetchMovies = async ({ query }: { query: string }) => {
     headers: TMDB_CONFIG.headers,
   });
 
-  console.log("🚀 ~ fetchMovies ~ response:", response);
-
   if (!response.ok) {
     // @ts-ignore
     throw new Error("Failed to fetch movies", response.statusText);
   }
 
   const data = await response.json();
-  console.log("🚀 ~ fetchMovies ~ data:", data);
 
   return data.results;
 };
